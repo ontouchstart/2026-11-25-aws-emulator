@@ -1,0 +1,9 @@
+# https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2604-Readme.md
+name: ubuntu-26.04
+on: push
+jobs:
+  ci:
+    runs-on: ubuntu-26.04
+    steps:
+    - uses: actions/checkout@v7
+    - run: make full-test
