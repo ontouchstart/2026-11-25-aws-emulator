@@ -60,7 +60,6 @@ s3-keys:
 
 full-test:
 	make up
-	rm -rf data
 	mkdir -p data
 	cp README.md data/AI.md
 	make s3-list
@@ -72,4 +71,6 @@ full-test:
 	make s3-download bucket=my-bucket key=/AI/README.md dest=downloaded/AI/README.md
 	make down
 	ls -lR data
+
+clean:
 	rm -rf data
